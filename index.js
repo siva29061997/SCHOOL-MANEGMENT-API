@@ -3,7 +3,6 @@ const cors = require('cors');
 const mongodb = require('mongodb');
 const mongoClient = mongodb.MongoClient
 const app = express();
-const port = 5000;
 const URL = "mongodb+srv://shibil_siva:siva1997@siva.5o2iufb.mongodb.net/?retryWrites=true&w=majority"
 const DB = "school-management-system"
 const dotenv = require("dotenv").config();
@@ -207,6 +206,8 @@ app.delete("/teacher/:id",async function(req,res){
     }
 });
 
+const port = process.env.PORT || 5000;
+
 app.listen(port, () => {
     console.log(`server conect on : ${port}`)
-})
+});

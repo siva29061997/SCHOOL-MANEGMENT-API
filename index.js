@@ -4,7 +4,7 @@ const mongodb = require('mongodb');
 const mongoClient = mongodb.MongoClient
 const app = express();
 const port = 5000;
-const URL = "mongodb+srv://shibil_siva:siva1997@siva.5o2iufb.mongodb.net/?retryWrites=true&w=majority"
+const URL = process.env.DB
 const DB = "school-management-system"
 const dotenv = require("dotenv").config();
 

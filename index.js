@@ -402,6 +402,10 @@ app.delete("/book/:id", async function (req, res) {
     }
 });
 
+app.get("/", (req, res) => {
+    res.send("Working fine...");
+});
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
